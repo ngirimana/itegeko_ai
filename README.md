@@ -1,8 +1,8 @@
 # ⚖️ Itegeko AI - Rwanda Law Navigator
 
-[![Build Status](https://github.com/itegeko-ai/itegeko-ai/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/itegeko-ai/itegeko-ai/actions)
+[![Build Status](https://github.com/ngirimana/itegeko_ai/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/ngirimana/itegeko_ai/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Stack](https://img.shields.io/badge/Stack-Spring%20Boot%20%7C%20FastAPI%20%7C%20Next.js-blue)](https://github.com/itegeko-ai/itegeko-ai)
+[![Stack](https://img.shields.io/badge/Stack-Spring%20Boot%20%7C%20FastAPI%20%7C%20Next.js-blue)](https://github.com/ngirimana/itegeko_ai)
 
 Itegeko AI is a production-grade legal information platform designed to make Rwanda's laws accessible through modern technology. It combines high-performance microservices, vector search, and Retrieval-Augmented Generation (RAG) to provide accurate, source-backed answers to legal queries.
 
