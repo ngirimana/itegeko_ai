@@ -1,0 +1,9 @@
+legal-service/target/
+identity-service/target/
+frontend/.next/
+frontend/node_modules/
+ai-service/.venv/
+__pycache__/
+.env
+node_modules/
+.DS_Store

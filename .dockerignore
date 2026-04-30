@@ -1,0 +1,11 @@
+.git
+.env
+.DS_Store
+node_modules
+frontend/node_modules
+frontend/.next
+legal-service/target
+identity-service/target
+ai-service/.venv
+__pycache__
+*.pyc

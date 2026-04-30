@@ -1,0 +1,23 @@
+{
+  "name": "itegeko-ai-rwanda-law-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MVP implementation of Itegeko AI, a Rwanda law search and source-backed legal information platform.",
+  "scripts": {
+    "dev": "docker compose up --build",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f",
+    "frontend:dev": "cd frontend && npm run dev",
+    "ai:dev": "cd ai-service && uvicorn app.main:app --reload",
+    "test": "npm run test:backend",
+    "test:backend": "npm run test:identity && npm run test:legal && npm run test:ai",
+    "test:identity": "cd identity-service && mvn test",
+    "test:legal": "cd legal-service && mvn test",
+    "test:ai": "sh scripts/test-ai.sh",
+    "legal:docker": "docker compose up legal-service --build",
+    "identity:docker": "docker compose up identity-service --build"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
