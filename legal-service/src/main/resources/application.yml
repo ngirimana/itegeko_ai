@@ -7,7 +7,7 @@ spring:
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/itegeko_ai}
     username: ${DATABASE_USERNAME:itegeko}
-    password: ${DATABASE_PASSWORD:itegeko}
+    password: ${DATABASE_PASSWORD}
     hikari:
       connection-init-sql: SET search_path TO legal, public
   flyway:
@@ -32,7 +32,7 @@ spring:
 
 app:
   ai-service-url: ${AI_SERVICE_URL:http://localhost:8000}
-  internal-api-key: ${INTERNAL_API_KEY:local-dev-internal-key}
+  internal-api-key: ${INTERNAL_API_KEY}
   ai:
     request-timeout-ms: ${AI_REQUEST_TIMEOUT_MS:10000}
     max-retries: ${AI_MAX_RETRIES:2}
@@ -41,7 +41,7 @@ app:
   storage:
     endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
     access-key: ${MINIO_ACCESS_KEY:itegeko}
-    secret-key: ${MINIO_SECRET_KEY:itegeko123}
+    secret-key: ${MINIO_SECRET_KEY}
     bucket: ${MINIO_BUCKET:itegeko-documents}
 
 management:
