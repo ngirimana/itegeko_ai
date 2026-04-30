@@ -43,4 +43,5 @@ jobs:
       - name: Test AI Service
         run: |
           cd ai-service
+          export PYTHONPATH=$PYTHONPATH:.
           pytest
