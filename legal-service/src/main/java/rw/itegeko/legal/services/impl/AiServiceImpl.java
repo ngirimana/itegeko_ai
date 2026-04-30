@@ -25,7 +25,16 @@ public class AiServiceImpl implements AiService {
         @Value("${app.ai.max-retries:2}") long maxRetries,
         @Value("${app.internal-api-key}") String internalApiKey
     ) {
-        this.webClient = WebClient.builder().baseUrl(aiServiceUrl).build();
+        this(WebClient.builder().baseUrl(aiServiceUrl).build(), requestTimeoutMs, maxRetries, internalApiKey);
+    }
+
+    AiServiceImpl(
+        WebClient webClient,
+        long requestTimeoutMs,
+        long maxRetries,
+        String internalApiKey
+    ) {
+        this.webClient = webClient;
         this.requestTimeout = Duration.ofMillis(requestTimeoutMs);
         this.maxRetries = maxRetries;
         this.internalApiKey = internalApiKey;

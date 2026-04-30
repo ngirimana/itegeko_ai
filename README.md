@@ -1,7 +1,7 @@
 # ⚖️ Itegeko AI - Rwanda Law Navigator
 
 [![Build Status](https://github.com/ngirimana/itegeko_ai/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/ngirimana/itegeko_ai/actions)
-[![Line Coverage](https://img.shields.io/badge/line%20coverage-60%25-yellow)](https://github.com/ngirimana/itegeko_ai/actions/workflows/backend-tests.yml)
+[![Line Coverage](https://img.shields.io/badge/line%20coverage-91%25-brightgreen)](https://github.com/ngirimana/itegeko_ai/actions/workflows/backend-tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Stack](https://img.shields.io/badge/Stack-Spring%20Boot%20%7C%20FastAPI%20%7C%20Next.js-blue)](https://github.com/ngirimana/itegeko_ai)
 
