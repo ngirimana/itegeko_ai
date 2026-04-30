@@ -22,10 +22,18 @@ jobs:
           cache: maven
       
       - name: Test Legal Service
-        run: cd legal-service && mvn test
+        run: cd legal-service && mvn verify
         
       - name: Test Identity Service
-        run: cd identity-service && mvn test
+        run: cd identity-service && mvn verify
+
+      - name: Upload Java Coverage Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-coverage-reports
+          path: |
+            legal-service/target/site/jacoco/
+            identity-service/target/site/jacoco/
 
   test-python:
     runs-on: ubuntu-latest
@@ -47,4 +55,10 @@ jobs:
         run: |
           cd ai-service
           export PYTHONPATH=$PYTHONPATH:.
-          python -m pytest
+          python -m pytest --cov=app --cov-report=xml --cov-report=term
+
+      - name: Upload Python Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-coverage-report
+          path: ai-service/coverage.xml

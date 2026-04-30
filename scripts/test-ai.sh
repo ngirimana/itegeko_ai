@@ -12,5 +12,7 @@ else
   PYTHON_BIN="python3"
 fi
 
-"$PYTHON_BIN" -m compileall app
-"$PYTHON_BIN" -m unittest discover -s tests
+PYTHONPATH="${PYTHONPATH:-}:."
+export PYTHONPATH
+
+"$PYTHON_BIN" -m pytest --cov=app --cov-report=xml --cov-report=term

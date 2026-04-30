@@ -177,10 +177,17 @@ We maintain high test coverage across all services.
 npm run test:backend
 
 # Service-specific tests
-cd legal-service && mvn test
-cd identity-service && mvn test
+cd legal-service && mvn verify
+cd identity-service && mvn verify
 sh scripts/test-ai.sh
 ```
+
+The backend test commands mirror `.github/workflows/backend-tests.yml`. Maven `verify`
+generates JaCoCo HTML reports at `legal-service/target/site/jacoco/` and
+`identity-service/target/site/jacoco/`; the AI test script runs `pytest` with
+coverage and writes `ai-service/coverage.xml`. Install `ai-service/requirements.txt`
+and `ai-service/requirements-dev.txt` before running the Python coverage command
+locally, matching the GitHub Actions setup.
 
 ---
 

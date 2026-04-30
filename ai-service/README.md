@@ -58,6 +58,11 @@ app/
 ## 🧪 Testing
 
 ```bash
-pytest
+pip install -r requirements.txt -r requirements-dev.txt
+sh ../scripts/test-ai.sh
 ```
-*Note: Some tests may require `scripts/test-ai.sh` for full integration checks.*
+
+The test script matches the GitHub Actions coverage command:
+`python -m pytest --cov=app --cov-report=xml --cov-report=term`. It writes the
+reproducible XML coverage report to `coverage.xml` for local inspection and CI
+artifact upload.

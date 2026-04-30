@@ -11,8 +11,8 @@
     "ai:dev": "cd ai-service && uvicorn app.main:app --reload",
     "test": "npm run test:backend",
     "test:backend": "npm run test:identity && npm run test:legal && npm run test:ai",
-    "test:identity": "cd identity-service && mvn test",
-    "test:legal": "cd legal-service && mvn test",
+    "test:identity": "cd identity-service && mvn verify",
+    "test:legal": "cd legal-service && mvn verify",
     "test:ai": "sh scripts/test-ai.sh",
     "legal:docker": "docker compose up legal-service --build",
     "identity:docker": "docker compose up identity-service --build"
